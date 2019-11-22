@@ -1,0 +1,82 @@
+"Enter number: Error!"
+
+inc 12
+
+lit 0
+lit 14
+lit 15
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+lv 0 36
+lit 1
+rel 0
+tjmp .negativeNumber
+la 0 32
+lit 1
+rel 2
+tjmp .one
+
+la 0 36
+lit 2
+sto
+jmp .nextPrime
+halt
+
+.nextPrime
+lv 0 32
+lv 0 36
+mod
+lit 0
+rel 2
+fjmp .prime
+
+la 0 32
+lv 0 32
+lv 0 36
+div
+sto
+
+lv 0 36
+lit 1
+out 0
+out 3
+
+la 0 40
+lit 2
+sto
+lv 0 32
+lit 1
+rel 2
+tjmp .end
+jmp .nextPrime
+halt
+
+.prime
+la 0 36
+lv 0 36
+lit 1
+add
+sto
+jmp .nextPrime
+
+.one
+lit 1
+lit 1
+out 0
+out 3
+jmp .end
+
+.negativeNumber
+lit 14
+lit 6
+lit 7
+out 2
+out 3
+jmp .end
+
+.end
+halt

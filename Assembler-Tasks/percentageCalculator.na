@@ -1,0 +1,36 @@
+"Geben Sie die max. erreichbare Punktzahl ein: Geben Sie ihre Punktezahl ein"
+
+inc 16
+
+lit 0 #Output 1
+lit 46
+lit 47
+out 2
+
+la 0 32 #Input 1
+la 0 36
+in 0
+
+lit 46 #Output 2
+lit 29
+lit 30
+out 2
+
+la 0 40 #Input 2
+la 0 44
+in 0
+
+la 0 52 #Result
+lv 0 40 # Berechnung
+lit 100
+mul
+lv 0 32
+div
+sto
+
+lv 0 52
+lit 1
+out 0
+out 3
+
+halt
